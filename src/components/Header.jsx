@@ -34,7 +34,7 @@ function Header() {
                         <Link style={location.pathname == "/contacts" ? { color: "red" } : {}} to="/contacts">Contacts</Link>
                     </li>
                     <li>
-                        <Link style={location.pathname == "/form" ? { color: "red" } : {}} to="/form">From</Link>
+                        <Link style={location.pathname == "/userprofile" ? { color: "red" } : {}} to="/userprofile">User Profile</Link>
                     </li>
                     <li>
                         <Link style={location.pathname == "/hasljdakjdhkjadhajsdhajksdhkjasdh" ? { color: "red" } : {}} to="/hasljdakjdhkjadhajsdhajksdhkjasdh">wrong page</Link>
