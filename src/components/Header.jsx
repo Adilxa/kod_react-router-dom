@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import "./style.css";
+import { todoStore } from '../store/todoListStore';
 
 function Header() {
 
@@ -10,6 +11,7 @@ function Header() {
     return (
         <header>
             <nav >
+                {todoStore.tasks[0]}
                 <ul
                     style={{
                         display: "flex",
