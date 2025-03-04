@@ -1,0 +1,8 @@
+{
+  "welcome": "Welcome to the application!",
+  "dashboard": "Dashboard",
+  "settings": "Settings",
+  "price": "Price: {{value, currency}}",
+  "apple_one": "1 apple",
+  "apple_other": "{{count}} apples"
+}

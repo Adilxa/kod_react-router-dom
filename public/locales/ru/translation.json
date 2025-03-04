@@ -1,0 +1,8 @@
+{
+  "welcome": "Добро пожаловать в приложение!",
+  "dashboard": "Панель управления",
+  "settings": "Настройки",
+  "price": "Цена: {{value, currency}}",
+  "apple_one": "1 яблоко",
+  "apple_other": "{{count}} яблок"
+}
