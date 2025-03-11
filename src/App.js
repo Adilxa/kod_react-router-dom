@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import MyForm from "./components/MyForm";
 import { Temporal } from "@js-temporal/polyfill";
@@ -45,6 +45,31 @@ const App = () => {
   // const date = Temporal.PlainDate.from("2024-03-05");
   // console.log(date.toLocaleString("ru-RU"));
   // console.log(date.toLocaleString("en-US"));
+
+  useEffect(() => {
+    const birthDateString = prompt("Enter ure date of birth YYYY-MM-DD");
+
+    const birthDate = Temporal.PlainDate.from(birthDateString);
+
+    const today = Temporal.Now.plainDateISO();
+
+    const diff = today.since(birthDate).days;
+
+    const daysOfWeek = [
+      "воскресенье",
+      "понедельник",
+      "вторник",
+      "среда",
+      "четверг",
+      "пятница",
+      "суббота",
+    ];
+
+    const birthDayOfWeek = daysOfWeek[birthDate.dayOfWeek - 1];
+
+    console.log(`Вы родились в ${birthDayOfWeek}.`);
+    console.log(`С момента вашего рождения прошло ${diff} дней.`);
+  }, []);
 
   return <MyForm />;
 };
